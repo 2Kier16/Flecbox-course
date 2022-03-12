@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>HipHop101</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+    <style>
+        html {
+            font-family: 'Courier New', Courier, monospace
+        }
+        
+        body {
+            margin: 0px;
+            background-color: black;
+        }
+        
+        .navbar {
+            background: rgba(0, 60, 255, 0.993);
+        }
+        
+        .navbar div {
+            display: none;
+        }
+        
+        .navbar a,
+        .navbar .brand {
+            display: inline-block;
+        }
+        
+        .navbar .link {
+            display: block;
+            text-align: center;
+            padding: 1em;
+            text-decoration: none;
+            background: rgb(72, 72, 73);
+            color: black;
+        }
+        
+        .navbar .link:hover,
+        .navbar .link:active {
+            color: goldenrod;
+            background: rgb(72, 72, 73);
+        }
+        
+        .navbar .brand {
+            width: 10em;
+            text-align: center;
+            padding: 1em;
+            color: goldenrod;
+        }
+        
+        .navbar a {
+            text-decoration: none;
+        }
+        
+        .navbar a {
+            padding: 1em;
+            color: goldenrod;
+        }
+        
+        .b-boy {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 15px;
+            justify-content: space-around;
+        }
+        
+        .b-boy>img {
+            margin-top: 200px;
+            padding-bottom: 15px;
+            height: 350px;
+        }
+        
+        @media (min-width: 48em) {
+            .navbar {
+                display: flex;
+            }
+            .navbar .left,
+            .navbar .right {
+                display: flex;
+                flex: 1;
+            }
+            .navbar .link {
+                width: auto;
+            }
+            .navbar .right {
+                justify-content: flex-end;
+            }
+            .navbar a {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 48em) {
+            .navbar div {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 48em) {
+            .navbar.active a {
+                background: rgb(47, 48, 49);
+                color: white;
+            }
+            .navbar .brand {
+                text-align: left;
+            }
+            .navbar.active div {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#" class="toggle" id="navHamburger">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a href="#" class="brand">Kier V. Turpin</a>
+        <div class="left">
+            <a href="#" class="link">Dj'ing</a>
+            <a href="#" class="link">Lyrics</a>
+            <a href="#" class="link">B-Boy/B-Girl</a>
+        </div>
+        <div class="right">
+            <a href="#" class="link">Graffiti</a>
+        </div>
+    </div>
+    <div class="b-boy">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/leIPcLQK8IY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="/images/elements of hiphop (1).png " alt="Temple of HipHop " />
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tp23e_89MDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+
+<script>
+    const navHamburger = document.querySelector('#navHamburger');
+    navHamburger.addEventListener('click', (e) => {
+        navHamburger.parentElement.classList.toggle('active');
+    })
+</script>
+
+</html>
